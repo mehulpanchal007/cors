@@ -1,18 +1,20 @@
-<html>
-    <body>
+<html><head></head>
+
+<body>
         <h1>CORS XHR Test form</h1><br><br>
         <label>URL</label><input id="suspecturl" value="">
         <label>Parameters</label><input id="param" value="">
-        <button onclick="chkcors()">Submit</button>
+        <button id="submitter">Submit</button>
         <script>
+            document.getElementById("submitter").addEventListener("click", chkcors, false);
             function chkcors() {
                 var SuspectUrl = document.getElementById("suspecturl").value;
                 var params = document.getElementById("param").value;
                 var xhttp = new XMLHttpRequest();
-                http.setRequestHeader('Content-type', 'application/x-www-form-urlencoded; charset=UTF-8')
+                http.setRequestHeader('Content-type', 'application/x-www-form-urlencoded; charset=UTF-8');
                 xhttp.open("POST", SuspectUrl, true);
                 xhttp.send(params);
             }
         </script>
-    </body>
-</html>
+    
+</body></html>
