@@ -1,0 +1,14 @@
+<html>
+    <body>
+        <input id="suspecturl" value="">
+        <input id="param" value="">
+        <script>
+            var SuspectUrl = document.getElementById("suspecturl").value;
+            var params = document.getElementById("param").value;
+            var xhttp = new XMLHttpRequest();
+            xhttp.onreadystatechange = function() {}
+            xhttp.open("POST", SuspectUrl, true);
+            xhttp.send(params);
+        </script>
+    </body>
+</html>
